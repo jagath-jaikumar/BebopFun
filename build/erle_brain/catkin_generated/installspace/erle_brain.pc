@@ -1,0 +1,8 @@
+prefix=/home/nb950/catkin_ws/install
+
+Name: erle_brain
+Description: Description of erle_brain
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nb950/catkin_ws/install/lib 
+Requires: roscpp sensor_msgs mavros_msgs

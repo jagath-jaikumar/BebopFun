@@ -1,0 +1,2 @@
+april_tag:bebop_autonomy/bebop_autonomy:bebop_autonomy/bebop_description:bebop_autonomy/bebop_driver:bebop_autonomy/bebop_msgs:bebop_autonomy/bebop_tools:bebop_drive
+-DCATKIN_DEVEL_PREFIX=/home/nb950/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nb950/catkin_ws/install -G Unix Makefiles

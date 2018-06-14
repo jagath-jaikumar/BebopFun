@@ -1,0 +1,8 @@
+prefix=/home/nb950/catkin_ws/devel
+
+Name: bebop_drive
+Description: Description of bebop_drive
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nb950/catkin_ws/devel/lib 
+Requires: 

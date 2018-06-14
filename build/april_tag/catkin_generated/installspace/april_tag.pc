@@ -1,0 +1,8 @@
+prefix=/home/nb950/catkin_ws/install
+
+Name: april_tag
+Description: Description of april_tag
+Version: 0.0.0
+Cflags: -I/home/nb950/catkin_ws/install/include
+Libs: -L/home/nb950/catkin_ws/install/lib 
+Requires: roscpp sensor_msgs message_runtime
