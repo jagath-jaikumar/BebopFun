@@ -29,3 +29,8 @@ roslaunch bebop_driver bebop_node.launch
 ```bash
 rosrun bebop_drive [executable name]
 ```
+
+## Running bebop camera node
+```bash
+rosrun april_tag april_tag_still
+```
