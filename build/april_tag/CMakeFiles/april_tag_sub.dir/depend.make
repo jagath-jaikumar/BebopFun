@@ -5,9 +5,12 @@ april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /home/nb950/catk
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /home/nb950/catkin_ws/devel/include/april_tag/AprilTagList.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /home/nb950/catkin_ws/src/april_tag/src/april_tag_sub.cpp
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point32.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseStamped.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
+april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/ros/assert.h
@@ -64,6 +67,7 @@ april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/std_msgs/Empty.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/std_msgs/String.h
 april_tag/CMakeFiles/april_tag_sub.dir/src/april_tag_sub.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h

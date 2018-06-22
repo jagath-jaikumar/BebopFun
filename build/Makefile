@@ -1635,6 +1635,32 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named april_tag_still
+
+# Build rule for target.
+april_tag_still: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_still
+.PHONY : april_tag_still
+
+# fast build rule for target.
+april_tag_still/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/build
+.PHONY : april_tag_still/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_out
+
+# Build rule for target.
+april_tag_out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_out
+.PHONY : april_tag_out
+
+# fast build rule for target.
+april_tag_out/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/build
+.PHONY : april_tag_out/fast
+
+#=============================================================================
 # Target rules for targets named april_tag_node
 
 # Build rule for target.
@@ -2631,6 +2657,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... april_tag_still"
+	@echo "... april_tag_out"
 	@echo "... april_tag_node"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... _april_tag_generate_messages_check_deps_AprilTag"
