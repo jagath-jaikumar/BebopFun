@@ -417,6 +417,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "bebop_drive/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "bebop_drive/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "bebop_drive/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "april_tag/CMakeFiles/april_tag_follow.dir/DependInfo.cmake"
   "april_tag/CMakeFiles/april_tag_still.dir/DependInfo.cmake"
   "april_tag/CMakeFiles/april_tag_out.dir/DependInfo.cmake"
   "april_tag/CMakeFiles/april_tag_node.dir/DependInfo.cmake"

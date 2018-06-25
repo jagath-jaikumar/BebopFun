@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/nb950/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -100,6 +88,18 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/nb950/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_follow.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_follow.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_follow.dir/rule
+
+# Convenience name for target.
+april_tag_follow: april_tag/CMakeFiles/april_tag_follow.dir/rule
+
+.PHONY : april_tag_follow
+
+# fast build rule for target.
+april_tag_follow/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
+.PHONY : april_tag_follow/fast
 
 # Convenience name for target.
 april_tag/CMakeFiles/april_tag_still.dir/rule:
@@ -570,6 +585,33 @@ april_tag_gennodejs/fast:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_gennodejs.dir/build.make april_tag/CMakeFiles/april_tag_gennodejs.dir/build
 .PHONY : april_tag_gennodejs/fast
 
+src/april_tag_follow.o: src/april_tag_follow.cpp.o
+
+.PHONY : src/april_tag_follow.o
+
+# target to build an object file
+src/april_tag_follow.cpp.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/april_tag_follow.cpp.o
+.PHONY : src/april_tag_follow.cpp.o
+
+src/april_tag_follow.i: src/april_tag_follow.cpp.i
+
+.PHONY : src/april_tag_follow.i
+
+# target to preprocess a source file
+src/april_tag_follow.cpp.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/april_tag_follow.cpp.i
+.PHONY : src/april_tag_follow.cpp.i
+
+src/april_tag_follow.s: src/april_tag_follow.cpp.s
+
+.PHONY : src/april_tag_follow.s
+
+# target to generate assembly for a file
+src/april_tag_follow.cpp.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/april_tag_follow.cpp.s
+.PHONY : src/april_tag_follow.cpp.s
+
 src/april_tag_node.o: src/april_tag_node.cpp.o
 
 .PHONY : src/april_tag_node.o
@@ -684,6 +726,7 @@ src/apriltags/Edge.o: src/apriltags/Edge.cc.o
 
 # target to build an object file
 src/apriltags/Edge.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.o
@@ -696,6 +739,7 @@ src/apriltags/Edge.i: src/apriltags/Edge.cc.i
 
 # target to preprocess a source file
 src/apriltags/Edge.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.i
@@ -708,6 +752,7 @@ src/apriltags/Edge.s: src/apriltags/Edge.cc.s
 
 # target to generate assembly for a file
 src/apriltags/Edge.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.s
@@ -720,6 +765,7 @@ src/apriltags/FloatImage.o: src/apriltags/FloatImage.cc.o
 
 # target to build an object file
 src/apriltags/FloatImage.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.o
@@ -732,6 +778,7 @@ src/apriltags/FloatImage.i: src/apriltags/FloatImage.cc.i
 
 # target to preprocess a source file
 src/apriltags/FloatImage.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.i
@@ -744,6 +791,7 @@ src/apriltags/FloatImage.s: src/apriltags/FloatImage.cc.s
 
 # target to generate assembly for a file
 src/apriltags/FloatImage.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.s
@@ -756,6 +804,7 @@ src/apriltags/GLine2D.o: src/apriltags/GLine2D.cc.o
 
 # target to build an object file
 src/apriltags/GLine2D.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.o
@@ -768,6 +817,7 @@ src/apriltags/GLine2D.i: src/apriltags/GLine2D.cc.i
 
 # target to preprocess a source file
 src/apriltags/GLine2D.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.i
@@ -780,6 +830,7 @@ src/apriltags/GLine2D.s: src/apriltags/GLine2D.cc.s
 
 # target to generate assembly for a file
 src/apriltags/GLine2D.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.s
@@ -792,6 +843,7 @@ src/apriltags/GLineSegment2D.o: src/apriltags/GLineSegment2D.cc.o
 
 # target to build an object file
 src/apriltags/GLineSegment2D.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.o
@@ -804,6 +856,7 @@ src/apriltags/GLineSegment2D.i: src/apriltags/GLineSegment2D.cc.i
 
 # target to preprocess a source file
 src/apriltags/GLineSegment2D.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.i
@@ -816,6 +869,7 @@ src/apriltags/GLineSegment2D.s: src/apriltags/GLineSegment2D.cc.s
 
 # target to generate assembly for a file
 src/apriltags/GLineSegment2D.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.s
@@ -828,6 +882,7 @@ src/apriltags/Gaussian.o: src/apriltags/Gaussian.cc.o
 
 # target to build an object file
 src/apriltags/Gaussian.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.o
@@ -840,6 +895,7 @@ src/apriltags/Gaussian.i: src/apriltags/Gaussian.cc.i
 
 # target to preprocess a source file
 src/apriltags/Gaussian.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.i
@@ -852,6 +908,7 @@ src/apriltags/Gaussian.s: src/apriltags/Gaussian.cc.s
 
 # target to generate assembly for a file
 src/apriltags/Gaussian.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.s
@@ -864,6 +921,7 @@ src/apriltags/GrayModel.o: src/apriltags/GrayModel.cc.o
 
 # target to build an object file
 src/apriltags/GrayModel.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.o
@@ -876,6 +934,7 @@ src/apriltags/GrayModel.i: src/apriltags/GrayModel.cc.i
 
 # target to preprocess a source file
 src/apriltags/GrayModel.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.i
@@ -888,6 +947,7 @@ src/apriltags/GrayModel.s: src/apriltags/GrayModel.cc.s
 
 # target to generate assembly for a file
 src/apriltags/GrayModel.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.s
@@ -900,6 +960,7 @@ src/apriltags/Homography33.o: src/apriltags/Homography33.cc.o
 
 # target to build an object file
 src/apriltags/Homography33.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.o
@@ -912,6 +973,7 @@ src/apriltags/Homography33.i: src/apriltags/Homography33.cc.i
 
 # target to preprocess a source file
 src/apriltags/Homography33.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.i
@@ -924,6 +986,7 @@ src/apriltags/Homography33.s: src/apriltags/Homography33.cc.s
 
 # target to generate assembly for a file
 src/apriltags/Homography33.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.s
@@ -936,6 +999,7 @@ src/apriltags/MathUtil.o: src/apriltags/MathUtil.cc.o
 
 # target to build an object file
 src/apriltags/MathUtil.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.o
@@ -948,6 +1012,7 @@ src/apriltags/MathUtil.i: src/apriltags/MathUtil.cc.i
 
 # target to preprocess a source file
 src/apriltags/MathUtil.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.i
@@ -960,6 +1025,7 @@ src/apriltags/MathUtil.s: src/apriltags/MathUtil.cc.s
 
 # target to generate assembly for a file
 src/apriltags/MathUtil.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.s
@@ -972,6 +1038,7 @@ src/apriltags/Quad.o: src/apriltags/Quad.cc.o
 
 # target to build an object file
 src/apriltags/Quad.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.o
@@ -984,6 +1051,7 @@ src/apriltags/Quad.i: src/apriltags/Quad.cc.i
 
 # target to preprocess a source file
 src/apriltags/Quad.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.i
@@ -996,6 +1064,7 @@ src/apriltags/Quad.s: src/apriltags/Quad.cc.s
 
 # target to generate assembly for a file
 src/apriltags/Quad.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.s
@@ -1008,6 +1077,7 @@ src/apriltags/Segment.o: src/apriltags/Segment.cc.o
 
 # target to build an object file
 src/apriltags/Segment.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.o
@@ -1020,6 +1090,7 @@ src/apriltags/Segment.i: src/apriltags/Segment.cc.i
 
 # target to preprocess a source file
 src/apriltags/Segment.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.i
@@ -1032,6 +1103,7 @@ src/apriltags/Segment.s: src/apriltags/Segment.cc.s
 
 # target to generate assembly for a file
 src/apriltags/Segment.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.s
@@ -1044,6 +1116,7 @@ src/apriltags/TagDetection.o: src/apriltags/TagDetection.cc.o
 
 # target to build an object file
 src/apriltags/TagDetection.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.o
@@ -1056,6 +1129,7 @@ src/apriltags/TagDetection.i: src/apriltags/TagDetection.cc.i
 
 # target to preprocess a source file
 src/apriltags/TagDetection.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.i
@@ -1068,6 +1142,7 @@ src/apriltags/TagDetection.s: src/apriltags/TagDetection.cc.s
 
 # target to generate assembly for a file
 src/apriltags/TagDetection.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.s
@@ -1080,6 +1155,7 @@ src/apriltags/TagDetector.o: src/apriltags/TagDetector.cc.o
 
 # target to build an object file
 src/apriltags/TagDetector.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.o
@@ -1092,6 +1168,7 @@ src/apriltags/TagDetector.i: src/apriltags/TagDetector.cc.i
 
 # target to preprocess a source file
 src/apriltags/TagDetector.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.i
@@ -1104,6 +1181,7 @@ src/apriltags/TagDetector.s: src/apriltags/TagDetector.cc.s
 
 # target to generate assembly for a file
 src/apriltags/TagDetector.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.s
@@ -1116,6 +1194,7 @@ src/apriltags/TagFamily.o: src/apriltags/TagFamily.cc.o
 
 # target to build an object file
 src/apriltags/TagFamily.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.o
@@ -1128,6 +1207,7 @@ src/apriltags/TagFamily.i: src/apriltags/TagFamily.cc.i
 
 # target to preprocess a source file
 src/apriltags/TagFamily.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.i
@@ -1140,6 +1220,7 @@ src/apriltags/TagFamily.s: src/apriltags/TagFamily.cc.s
 
 # target to generate assembly for a file
 src/apriltags/TagFamily.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.s
@@ -1152,6 +1233,7 @@ src/apriltags/UnionFindSimple.o: src/apriltags/UnionFindSimple.cc.o
 
 # target to build an object file
 src/apriltags/UnionFindSimple.cc.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.o
@@ -1164,6 +1246,7 @@ src/apriltags/UnionFindSimple.i: src/apriltags/UnionFindSimple.cc.i
 
 # target to preprocess a source file
 src/apriltags/UnionFindSimple.cc.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.i
@@ -1176,6 +1259,7 @@ src/apriltags/UnionFindSimple.s: src/apriltags/UnionFindSimple.cc.s
 
 # target to generate assembly for a file
 src/apriltags/UnionFindSimple.cc.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.s
@@ -1188,10 +1272,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
+	@echo "... install"
+	@echo "... april_tag_follow"
 	@echo "... rebuild_cache"
 	@echo "... april_tag_still"
 	@echo "... april_tag_out"
@@ -1222,6 +1307,9 @@ help:
 	@echo "... april_tag_genlisp"
 	@echo "... april_tag_geneus"
 	@echo "... april_tag_gennodejs"
+	@echo "... src/april_tag_follow.o"
+	@echo "... src/april_tag_follow.i"
+	@echo "... src/april_tag_follow.s"
 	@echo "... src/april_tag_node.o"
 	@echo "... src/april_tag_node.i"
 	@echo "... src/april_tag_node.s"

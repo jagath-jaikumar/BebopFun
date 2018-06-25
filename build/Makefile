@@ -1635,6 +1635,19 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named april_tag_follow
+
+# Build rule for target.
+april_tag_follow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_follow
+.PHONY : april_tag_follow
+
+# fast build rule for target.
+april_tag_follow/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
+.PHONY : april_tag_follow/fast
+
+#=============================================================================
 # Target rules for targets named april_tag_still
 
 # Build rule for target.
@@ -2657,6 +2670,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... april_tag_follow"
 	@echo "... april_tag_still"
 	@echo "... april_tag_out"
 	@echo "... april_tag_node"
