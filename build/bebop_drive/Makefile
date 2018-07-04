@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /home/nb950/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -99,6 +87,18 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target test
 test:
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/nb950/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+bebop_drive/CMakeFiles/figure8.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 bebop_drive/CMakeFiles/figure8.dir/rule
+.PHONY : bebop_drive/CMakeFiles/figure8.dir/rule
+
+# Convenience name for target.
+figure8: bebop_drive/CMakeFiles/figure8.dir/rule
+
+.PHONY : figure8
+
+# fast build rule for target.
+figure8/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f bebop_drive/CMakeFiles/figure8.dir/build.make bebop_drive/CMakeFiles/figure8.dir/build
+.PHONY : figure8/fast
 
 # Convenience name for target.
 bebop_drive/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -357,16 +372,44 @@ src/drive_square.cpp.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f bebop_drive/CMakeFiles/drive_square.dir/build.make bebop_drive/CMakeFiles/drive_square.dir/src/drive_square.cpp.s
 .PHONY : src/drive_square.cpp.s
 
+src/figure8.o: src/figure8.cpp.o
+
+.PHONY : src/figure8.o
+
+# target to build an object file
+src/figure8.cpp.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f bebop_drive/CMakeFiles/figure8.dir/build.make bebop_drive/CMakeFiles/figure8.dir/src/figure8.cpp.o
+.PHONY : src/figure8.cpp.o
+
+src/figure8.i: src/figure8.cpp.i
+
+.PHONY : src/figure8.i
+
+# target to preprocess a source file
+src/figure8.cpp.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f bebop_drive/CMakeFiles/figure8.dir/build.make bebop_drive/CMakeFiles/figure8.dir/src/figure8.cpp.i
+.PHONY : src/figure8.cpp.i
+
+src/figure8.s: src/figure8.cpp.s
+
+.PHONY : src/figure8.s
+
+# target to generate assembly for a file
+src/figure8.cpp.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f bebop_drive/CMakeFiles/figure8.dir/build.make bebop_drive/CMakeFiles/figure8.dir/src/figure8.cpp.s
+.PHONY : src/figure8.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... figure8"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... test"
 	@echo "... roscpp_generate_messages_nodejs"
@@ -384,6 +427,9 @@ help:
 	@echo "... src/drive_square.o"
 	@echo "... src/drive_square.i"
 	@echo "... src/drive_square.s"
+	@echo "... src/figure8.o"
+	@echo "... src/figure8.i"
+	@echo "... src/figure8.s"
 .PHONY : help
 
 

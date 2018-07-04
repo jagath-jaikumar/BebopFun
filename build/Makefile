@@ -1492,6 +1492,19 @@ bebop_msgs_genpy/fast:
 .PHONY : bebop_msgs_genpy/fast
 
 #=============================================================================
+# Target rules for targets named figure8
+
+# Build rule for target.
+figure8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 figure8
+.PHONY : figure8
+
+# fast build rule for target.
+figure8/fast:
+	$(MAKE) -f bebop_drive/CMakeFiles/figure8.dir/build.make bebop_drive/CMakeFiles/figure8.dir/build
+.PHONY : figure8/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -1635,238 +1648,30 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named april_tag_follow
+# Target rules for targets named kinect_aux_node
 
 # Build rule for target.
-april_tag_follow: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_follow
-.PHONY : april_tag_follow
+kinect_aux_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_aux_node
+.PHONY : kinect_aux_node
 
 # fast build rule for target.
-april_tag_follow/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
-.PHONY : april_tag_follow/fast
+kinect_aux_node/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/kinect_aux_node.dir/build.make kinect_aux/CMakeFiles/kinect_aux_node.dir/build
+.PHONY : kinect_aux_node/fast
 
 #=============================================================================
-# Target rules for targets named april_tag_still
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
 
 # Build rule for target.
-april_tag_still: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_still
-.PHONY : april_tag_still
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-april_tag_still/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/build
-.PHONY : april_tag_still/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_out
-
-# Build rule for target.
-april_tag_out: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_out
-.PHONY : april_tag_out
-
-# fast build rule for target.
-april_tag_out/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/build
-.PHONY : april_tag_out/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_node
-
-# Build rule for target.
-april_tag_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_node
-.PHONY : april_tag_node
-
-# fast build rule for target.
-april_tag_node/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/build
-.PHONY : april_tag_node/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geometry_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named _april_tag_generate_messages_check_deps_AprilTag
-
-# Build rule for target.
-_april_tag_generate_messages_check_deps_AprilTag: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _april_tag_generate_messages_check_deps_AprilTag
-.PHONY : _april_tag_generate_messages_check_deps_AprilTag
-
-# fast build rule for target.
-_april_tag_generate_messages_check_deps_AprilTag/fast:
-	$(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build
-.PHONY : _april_tag_generate_messages_check_deps_AprilTag/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
-
-# Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_generate_messages_cpp
-
-# Build rule for target.
-april_tag_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_cpp
-.PHONY : april_tag_generate_messages_cpp
-
-# fast build rule for target.
-april_tag_generate_messages_cpp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build
-.PHONY : april_tag_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_generate_messages_py
-
-# Build rule for target.
-april_tag_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_py
-.PHONY : april_tag_generate_messages_py
-
-# fast build rule for target.
-april_tag_generate_messages_py/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build
-.PHONY : april_tag_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_generate_messages
-
-# Build rule for target.
-april_tag_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages
-.PHONY : april_tag_generate_messages
-
-# fast build rule for target.
-april_tag_generate_messages/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages.dir/build
-.PHONY : april_tag_generate_messages/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_sub
-
-# Build rule for target.
-april_tag_sub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_sub
-.PHONY : april_tag_sub
-
-# fast build rule for target.
-april_tag_sub/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/build
-.PHONY : april_tag_sub/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_genpy
-
-# Build rule for target.
-april_tag_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_genpy
-.PHONY : april_tag_genpy
-
-# fast build rule for target.
-april_tag_genpy/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_genpy.dir/build.make april_tag/CMakeFiles/april_tag_genpy.dir/build
-.PHONY : april_tag_genpy/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_generate_messages_nodejs
-
-# Build rule for target.
-april_tag_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_nodejs
-.PHONY : april_tag_generate_messages_nodejs
-
-# fast build rule for target.
-april_tag_generate_messages_nodejs/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build
-.PHONY : april_tag_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_eus
-
-# Build rule for target.
-geometry_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named april_tag_gencpp
-
-# Build rule for target.
-april_tag_gencpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_gencpp
-.PHONY : april_tag_gencpp
-
-# fast build rule for target.
-april_tag_gencpp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_gencpp.dir/build.make april_tag/CMakeFiles/april_tag_gencpp.dir/build
-.PHONY : april_tag_gencpp/fast
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make kinect_aux/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_eus
@@ -1878,7 +1683,7 @@ sensor_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f kinect_aux/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make kinect_aux/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1891,21 +1696,47 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	$(MAKE) -f kinect_aux/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make kinect_aux/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named april_tag_generate_messages_eus
+# Target rules for targets named sensor_msgs_generate_messages_lisp
 
 # Build rule for target.
-april_tag_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_eus
-.PHONY : april_tag_generate_messages_eus
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-april_tag_generate_messages_eus/fast:
-	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_eus.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_eus.dir/build
-.PHONY : april_tag_generate_messages_eus/fast
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make kinect_aux/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make kinect_aux/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make kinect_aux/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
@@ -1917,34 +1748,47 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f kinect_aux/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make kinect_aux/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
+# Target rules for targets named geometry_msgs_generate_messages_eus
 
 # Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
+geometry_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
 
 # fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
+geometry_msgs_generate_messages_eus/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make kinect_aux/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named _april_tag_generate_messages_check_deps_AprilTagList
+# Target rules for targets named geometry_msgs_generate_messages_lisp
 
 # Build rule for target.
-_april_tag_generate_messages_check_deps_AprilTagList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _april_tag_generate_messages_check_deps_AprilTagList
-.PHONY : _april_tag_generate_messages_check_deps_AprilTagList
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
 
 # fast build rule for target.
-_april_tag_generate_messages_check_deps_AprilTagList/fast:
-	$(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTagList.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTagList.dir/build
-.PHONY : _april_tag_generate_messages_check_deps_AprilTagList/fast
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make kinect_aux/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geometry_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_nodejs
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f kinect_aux/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make kinect_aux/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named april_tag_generate_messages_lisp
@@ -1960,6 +1804,71 @@ april_tag_generate_messages_lisp/fast:
 .PHONY : april_tag_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named april_tag_generate_messages_eus
+
+# Build rule for target.
+april_tag_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_eus
+.PHONY : april_tag_generate_messages_eus
+
+# fast build rule for target.
+april_tag_generate_messages_eus/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_eus.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_eus.dir/build
+.PHONY : april_tag_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_follow
+
+# Build rule for target.
+april_tag_follow: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_follow
+.PHONY : april_tag_follow
+
+# fast build rule for target.
+april_tag_follow/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
+.PHONY : april_tag_follow/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_gencpp
+
+# Build rule for target.
+april_tag_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_gencpp
+.PHONY : april_tag_gencpp
+
+# fast build rule for target.
+april_tag_gencpp/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_gencpp.dir/build.make april_tag/CMakeFiles/april_tag_gencpp.dir/build
+.PHONY : april_tag_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_generate_messages
+
+# Build rule for target.
+april_tag_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages
+.PHONY : april_tag_generate_messages
+
+# fast build rule for target.
+april_tag_generate_messages/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages.dir/build
+.PHONY : april_tag_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named _april_tag_generate_messages_check_deps_AprilTagList
+
+# Build rule for target.
+_april_tag_generate_messages_check_deps_AprilTagList: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _april_tag_generate_messages_check_deps_AprilTagList
+.PHONY : _april_tag_generate_messages_check_deps_AprilTagList
+
+# fast build rule for target.
+_april_tag_generate_messages_check_deps_AprilTagList/fast:
+	$(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTagList.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTagList.dir/build
+.PHONY : _april_tag_generate_messages_check_deps_AprilTagList/fast
+
+#=============================================================================
 # Target rules for targets named april_tag_genlisp
 
 # Build rule for target.
@@ -1971,6 +1880,32 @@ april_tag_genlisp: cmake_check_build_system
 april_tag_genlisp/fast:
 	$(MAKE) -f april_tag/CMakeFiles/april_tag_genlisp.dir/build.make april_tag/CMakeFiles/april_tag_genlisp.dir/build
 .PHONY : april_tag_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_still
+
+# Build rule for target.
+april_tag_still: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_still
+.PHONY : april_tag_still
+
+# fast build rule for target.
+april_tag_still/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/build
+.PHONY : april_tag_still/fast
+
+#=============================================================================
+# Target rules for targets named _april_tag_generate_messages_check_deps_AprilTag
+
+# Build rule for target.
+_april_tag_generate_messages_check_deps_AprilTag: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _april_tag_generate_messages_check_deps_AprilTag
+.PHONY : _april_tag_generate_messages_check_deps_AprilTag
+
+# fast build rule for target.
+_april_tag_generate_messages_check_deps_AprilTag/fast:
+	$(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build
+.PHONY : _april_tag_generate_messages_check_deps_AprilTag/fast
 
 #=============================================================================
 # Target rules for targets named april_tag_geneus
@@ -1997,6 +1932,123 @@ april_tag_gennodejs: cmake_check_build_system
 april_tag_gennodejs/fast:
 	$(MAKE) -f april_tag/CMakeFiles/april_tag_gennodejs.dir/build.make april_tag/CMakeFiles/april_tag_gennodejs.dir/build
 .PHONY : april_tag_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_node
+
+# Build rule for target.
+april_tag_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_node
+.PHONY : april_tag_node
+
+# fast build rule for target.
+april_tag_node/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/build
+.PHONY : april_tag_node/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_generate_messages_py
+
+# Build rule for target.
+april_tag_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_py
+.PHONY : april_tag_generate_messages_py
+
+# fast build rule for target.
+april_tag_generate_messages_py/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build
+.PHONY : april_tag_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_generate_messages_nodejs
+
+# Build rule for target.
+april_tag_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_nodejs
+.PHONY : april_tag_generate_messages_nodejs
+
+# fast build rule for target.
+april_tag_generate_messages_nodejs/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build
+.PHONY : april_tag_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_genpy
+
+# Build rule for target.
+april_tag_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_genpy
+.PHONY : april_tag_genpy
+
+# fast build rule for target.
+april_tag_genpy/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_genpy.dir/build.make april_tag/CMakeFiles/april_tag_genpy.dir/build
+.PHONY : april_tag_genpy/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_sub
+
+# Build rule for target.
+april_tag_sub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_sub
+.PHONY : april_tag_sub
+
+# fast build rule for target.
+april_tag_sub/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/build
+.PHONY : april_tag_sub/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_generate_messages_cpp
+
+# Build rule for target.
+april_tag_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_generate_messages_cpp
+.PHONY : april_tag_generate_messages_cpp
+
+# fast build rule for target.
+april_tag_generate_messages_cpp/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build
+.PHONY : april_tag_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_out
+
+# Build rule for target.
+april_tag_out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_out
+.PHONY : april_tag_out
+
+# fast build rule for target.
+april_tag_out/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/build
+.PHONY : april_tag_out/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_follow_search
+
+# Build rule for target.
+april_tag_follow_search: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_follow_search
+.PHONY : april_tag_follow_search
+
+# fast build rule for target.
+april_tag_follow_search/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/build
+.PHONY : april_tag_follow_search/fast
+
+#=============================================================================
+# Target rules for targets named april_tag_figure8
+
+# Build rule for target.
+april_tag_figure8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 april_tag_figure8
+.PHONY : april_tag_figure8
+
+# fast build rule for target.
+april_tag_figure8/fast:
+	$(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/build
+.PHONY : april_tag_figure8/fast
 
 #=============================================================================
 # Target rules for targets named nodelet_generate_messages_nodejs
@@ -2659,6 +2711,7 @@ help:
 	@echo "... bebop_msgs_genlisp"
 	@echo "... bebop_msgs_gennodejs"
 	@echo "... bebop_msgs_genpy"
+	@echo "... figure8"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
@@ -2670,34 +2723,37 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... april_tag_follow"
-	@echo "... april_tag_still"
-	@echo "... april_tag_out"
-	@echo "... april_tag_node"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... _april_tag_generate_messages_check_deps_AprilTag"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... april_tag_generate_messages_cpp"
-	@echo "... april_tag_generate_messages_py"
-	@echo "... april_tag_generate_messages"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... april_tag_sub"
-	@echo "... april_tag_genpy"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... april_tag_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... april_tag_gencpp"
+	@echo "... kinect_aux_node"
+	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... april_tag_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... _april_tag_generate_messages_check_deps_AprilTagList"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... april_tag_generate_messages_lisp"
+	@echo "... april_tag_generate_messages_eus"
+	@echo "... april_tag_follow"
+	@echo "... april_tag_gencpp"
+	@echo "... april_tag_generate_messages"
+	@echo "... _april_tag_generate_messages_check_deps_AprilTagList"
 	@echo "... april_tag_genlisp"
+	@echo "... april_tag_still"
+	@echo "... _april_tag_generate_messages_check_deps_AprilTag"
 	@echo "... april_tag_geneus"
 	@echo "... april_tag_gennodejs"
+	@echo "... april_tag_node"
+	@echo "... april_tag_generate_messages_py"
+	@echo "... april_tag_generate_messages_nodejs"
+	@echo "... april_tag_genpy"
+	@echo "... april_tag_sub"
+	@echo "... april_tag_generate_messages_cpp"
+	@echo "... april_tag_out"
+	@echo "... april_tag_follow_search"
+	@echo "... april_tag_figure8"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_lisp"

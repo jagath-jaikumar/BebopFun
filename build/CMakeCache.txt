@@ -210,6 +210,12 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//Path to a file.
+LIBUSB_INCLUDEDIR:PATH=/usr/include/libusb-1.0
+
+//Path to a library.
+LIBUSB_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libusb-1.0.so
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -426,6 +432,12 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
+
+//Value Computed by CMake
+kinect_aux_BINARY_DIR:STATIC=/home/nb950/catkin_ws/build/kinect_aux
+
+//Value Computed by CMake
+kinect_aux_SOURCE_DIR:STATIC=/home/nb950/catkin_ws/src/kinect_aux
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
@@ -696,7 +708,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

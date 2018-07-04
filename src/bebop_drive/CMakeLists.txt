@@ -135,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 
 add_executable(drive_square src/drive_square.cpp)
+add_executable(figure8 src/figure8.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -148,6 +149,10 @@ add_executable(drive_square src/drive_square.cpp)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(drive_square
+   ${catkin_LIBRARIES}
+ )
+
+  target_link_libraries(figure8
    ${catkin_LIBRARIES}
  )
 

@@ -56,6 +56,16 @@ CMAKE_BINARY_DIR = /home/nb950/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,17 +87,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -123,15 +122,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,304 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-april_tag/CMakeFiles/april_tag_follow.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_follow.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_follow.dir/rule
+april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-april_tag_follow: april_tag/CMakeFiles/april_tag_follow.dir/rule
+april_tag_generate_messages_lisp: april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
 
-.PHONY : april_tag_follow
+.PHONY : april_tag_generate_messages_lisp
 
 # fast build rule for target.
-april_tag_follow/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
-.PHONY : april_tag_follow/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_still.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_still.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_still.dir/rule
-
-# Convenience name for target.
-april_tag_still: april_tag/CMakeFiles/april_tag_still.dir/rule
-
-.PHONY : april_tag_still
-
-# fast build rule for target.
-april_tag_still/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/build
-.PHONY : april_tag_still/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_out.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_out.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_out.dir/rule
-
-# Convenience name for target.
-april_tag_out: april_tag/CMakeFiles/april_tag_out.dir/rule
-
-.PHONY : april_tag_out
-
-# fast build rule for target.
-april_tag_out/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/build
-.PHONY : april_tag_out/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_node.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_node.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_node.dir/rule
-
-# Convenience name for target.
-april_tag_node: april_tag/CMakeFiles/april_tag_node.dir/rule
-
-.PHONY : april_tag_node
-
-# fast build rule for target.
-april_tag_node/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/build
-.PHONY : april_tag_node/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
-.PHONY : april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
-
-# Convenience name for target.
-_april_tag_generate_messages_check_deps_AprilTag: april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
-
-.PHONY : _april_tag_generate_messages_check_deps_AprilTag
-
-# fast build rule for target.
-_april_tag_generate_messages_check_deps_AprilTag/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build
-.PHONY : _april_tag_generate_messages_check_deps_AprilTag/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-april_tag_generate_messages_cpp: april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
-
-.PHONY : april_tag_generate_messages_cpp
-
-# fast build rule for target.
-april_tag_generate_messages_cpp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build
-.PHONY : april_tag_generate_messages_cpp/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
-
-# Convenience name for target.
-april_tag_generate_messages_py: april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
-
-.PHONY : april_tag_generate_messages_py
-
-# fast build rule for target.
-april_tag_generate_messages_py/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build
-.PHONY : april_tag_generate_messages_py/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_generate_messages.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
-
-# Convenience name for target.
-april_tag_generate_messages: april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
-
-.PHONY : april_tag_generate_messages
-
-# fast build rule for target.
-april_tag_generate_messages/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages.dir/build
-.PHONY : april_tag_generate_messages/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_sub.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_sub.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_sub.dir/rule
-
-# Convenience name for target.
-april_tag_sub: april_tag/CMakeFiles/april_tag_sub.dir/rule
-
-.PHONY : april_tag_sub
-
-# fast build rule for target.
-april_tag_sub/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/build
-.PHONY : april_tag_sub/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_genpy.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_genpy.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_genpy.dir/rule
-
-# Convenience name for target.
-april_tag_genpy: april_tag/CMakeFiles/april_tag_genpy.dir/rule
-
-.PHONY : april_tag_genpy
-
-# fast build rule for target.
-april_tag_genpy/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_genpy.dir/build.make april_tag/CMakeFiles/april_tag_genpy.dir/build
-.PHONY : april_tag_genpy/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-april_tag_generate_messages_nodejs: april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
-
-.PHONY : april_tag_generate_messages_nodejs
-
-# fast build rule for target.
-april_tag_generate_messages_nodejs/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build
-.PHONY : april_tag_generate_messages_nodejs/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/april_tag_gencpp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_gencpp.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_gencpp.dir/rule
-
-# Convenience name for target.
-april_tag_gencpp: april_tag/CMakeFiles/april_tag_gencpp.dir/rule
-
-.PHONY : april_tag_gencpp
-
-# fast build rule for target.
-april_tag_gencpp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_gencpp.dir/build.make april_tag/CMakeFiles/april_tag_gencpp.dir/build
-.PHONY : april_tag_gencpp/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
+april_tag_generate_messages_lisp/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/build
+.PHONY : april_tag_generate_messages_lisp/fast
 
 # Convenience name for target.
 april_tag/CMakeFiles/april_tag_generate_messages_eus.dir/rule:
@@ -481,34 +196,49 @@ april_tag_generate_messages_eus/fast:
 .PHONY : april_tag_generate_messages_eus/fast
 
 # Convenience name for target.
-april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+april_tag/CMakeFiles/april_tag_follow.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_follow.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_follow.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_cpp: april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+april_tag_follow: april_tag/CMakeFiles/april_tag_follow.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_cpp
+.PHONY : april_tag_follow
 
 # fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
+april_tag_follow/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/build
+.PHONY : april_tag_follow/fast
 
 # Convenience name for target.
-april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+april_tag/CMakeFiles/april_tag_gencpp.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_gencpp.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_gencpp.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_nodejs: april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+april_tag_gencpp: april_tag/CMakeFiles/april_tag_gencpp.dir/rule
 
-.PHONY : sensor_msgs_generate_messages_nodejs
+.PHONY : april_tag_gencpp
 
 # fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
+april_tag_gencpp/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_gencpp.dir/build.make april_tag/CMakeFiles/april_tag_gencpp.dir/build
+.PHONY : april_tag_gencpp/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_generate_messages.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
+
+# Convenience name for target.
+april_tag_generate_messages: april_tag/CMakeFiles/april_tag_generate_messages.dir/rule
+
+.PHONY : april_tag_generate_messages
+
+# fast build rule for target.
+april_tag_generate_messages/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages.dir/build
+.PHONY : april_tag_generate_messages/fast
 
 # Convenience name for target.
 april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTagList.dir/rule:
@@ -526,21 +256,6 @@ _april_tag_generate_messages_check_deps_AprilTagList/fast:
 .PHONY : _april_tag_generate_messages_check_deps_AprilTagList/fast
 
 # Convenience name for target.
-april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
-.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-april_tag_generate_messages_lisp: april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/rule
-
-.PHONY : april_tag_generate_messages_lisp
-
-# fast build rule for target.
-april_tag_generate_messages_lisp/fast:
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_lisp.dir/build
-.PHONY : april_tag_generate_messages_lisp/fast
-
-# Convenience name for target.
 april_tag/CMakeFiles/april_tag_genlisp.dir/rule:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_genlisp.dir/rule
 .PHONY : april_tag/CMakeFiles/april_tag_genlisp.dir/rule
@@ -554,6 +269,36 @@ april_tag_genlisp: april_tag/CMakeFiles/april_tag_genlisp.dir/rule
 april_tag_genlisp/fast:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_genlisp.dir/build.make april_tag/CMakeFiles/april_tag_genlisp.dir/build
 .PHONY : april_tag_genlisp/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_still.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_still.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_still.dir/rule
+
+# Convenience name for target.
+april_tag_still: april_tag/CMakeFiles/april_tag_still.dir/rule
+
+.PHONY : april_tag_still
+
+# fast build rule for target.
+april_tag_still/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/build
+.PHONY : april_tag_still/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
+.PHONY : april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
+
+# Convenience name for target.
+_april_tag_generate_messages_check_deps_AprilTag: april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/rule
+
+.PHONY : _april_tag_generate_messages_check_deps_AprilTag
+
+# fast build rule for target.
+_april_tag_generate_messages_check_deps_AprilTag/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build.make april_tag/CMakeFiles/_april_tag_generate_messages_check_deps_AprilTag.dir/build
+.PHONY : _april_tag_generate_messages_check_deps_AprilTag/fast
 
 # Convenience name for target.
 april_tag/CMakeFiles/april_tag_geneus.dir/rule:
@@ -585,6 +330,141 @@ april_tag_gennodejs/fast:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_gennodejs.dir/build.make april_tag/CMakeFiles/april_tag_gennodejs.dir/build
 .PHONY : april_tag_gennodejs/fast
 
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_node.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_node.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_node.dir/rule
+
+# Convenience name for target.
+april_tag_node: april_tag/CMakeFiles/april_tag_node.dir/rule
+
+.PHONY : april_tag_node
+
+# fast build rule for target.
+april_tag_node/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/build
+.PHONY : april_tag_node/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
+
+# Convenience name for target.
+april_tag_generate_messages_py: april_tag/CMakeFiles/april_tag_generate_messages_py.dir/rule
+
+.PHONY : april_tag_generate_messages_py
+
+# fast build rule for target.
+april_tag_generate_messages_py/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_py.dir/build
+.PHONY : april_tag_generate_messages_py/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+april_tag_generate_messages_nodejs: april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/rule
+
+.PHONY : april_tag_generate_messages_nodejs
+
+# fast build rule for target.
+april_tag_generate_messages_nodejs/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_nodejs.dir/build
+.PHONY : april_tag_generate_messages_nodejs/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_genpy.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_genpy.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_genpy.dir/rule
+
+# Convenience name for target.
+april_tag_genpy: april_tag/CMakeFiles/april_tag_genpy.dir/rule
+
+.PHONY : april_tag_genpy
+
+# fast build rule for target.
+april_tag_genpy/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_genpy.dir/build.make april_tag/CMakeFiles/april_tag_genpy.dir/build
+.PHONY : april_tag_genpy/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_sub.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_sub.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_sub.dir/rule
+
+# Convenience name for target.
+april_tag_sub: april_tag/CMakeFiles/april_tag_sub.dir/rule
+
+.PHONY : april_tag_sub
+
+# fast build rule for target.
+april_tag_sub/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/build
+.PHONY : april_tag_sub/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+april_tag_generate_messages_cpp: april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/rule
+
+.PHONY : april_tag_generate_messages_cpp
+
+# fast build rule for target.
+april_tag_generate_messages_cpp/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build.make april_tag/CMakeFiles/april_tag_generate_messages_cpp.dir/build
+.PHONY : april_tag_generate_messages_cpp/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_out.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_out.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_out.dir/rule
+
+# Convenience name for target.
+april_tag_out: april_tag/CMakeFiles/april_tag_out.dir/rule
+
+.PHONY : april_tag_out
+
+# fast build rule for target.
+april_tag_out/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/build
+.PHONY : april_tag_out/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_follow_search.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_follow_search.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_follow_search.dir/rule
+
+# Convenience name for target.
+april_tag_follow_search: april_tag/CMakeFiles/april_tag_follow_search.dir/rule
+
+.PHONY : april_tag_follow_search
+
+# fast build rule for target.
+april_tag_follow_search/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/build
+.PHONY : april_tag_follow_search/fast
+
+# Convenience name for target.
+april_tag/CMakeFiles/april_tag_figure8.dir/rule:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 april_tag/CMakeFiles/april_tag_figure8.dir/rule
+.PHONY : april_tag/CMakeFiles/april_tag_figure8.dir/rule
+
+# Convenience name for target.
+april_tag_figure8: april_tag/CMakeFiles/april_tag_figure8.dir/rule
+
+.PHONY : april_tag_figure8
+
+# fast build rule for target.
+april_tag_figure8/fast:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/build
+.PHONY : april_tag_figure8/fast
+
 src/april_tag_follow.o: src/april_tag_follow.cpp.o
 
 .PHONY : src/april_tag_follow.o
@@ -611,6 +491,33 @@ src/april_tag_follow.s: src/april_tag_follow.cpp.s
 src/april_tag_follow.cpp.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/april_tag_follow.cpp.s
 .PHONY : src/april_tag_follow.cpp.s
+
+src/april_tag_follow_search.o: src/april_tag_follow_search.cpp.o
+
+.PHONY : src/april_tag_follow_search.o
+
+# target to build an object file
+src/april_tag_follow_search.cpp.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/april_tag_follow_search.cpp.o
+.PHONY : src/april_tag_follow_search.cpp.o
+
+src/april_tag_follow_search.i: src/april_tag_follow_search.cpp.i
+
+.PHONY : src/april_tag_follow_search.i
+
+# target to preprocess a source file
+src/april_tag_follow_search.cpp.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/april_tag_follow_search.cpp.i
+.PHONY : src/april_tag_follow_search.cpp.i
+
+src/april_tag_follow_search.s: src/april_tag_follow_search.cpp.s
+
+.PHONY : src/april_tag_follow_search.s
+
+# target to generate assembly for a file
+src/april_tag_follow_search.cpp.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/april_tag_follow_search.cpp.s
+.PHONY : src/april_tag_follow_search.cpp.s
 
 src/april_tag_node.o: src/april_tag_node.cpp.o
 
@@ -728,9 +635,11 @@ src/apriltags/Edge.o: src/apriltags/Edge.cc.o
 src/apriltags/Edge.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Edge.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Edge.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Edge.cc.o
 .PHONY : src/apriltags/Edge.cc.o
 
 src/apriltags/Edge.i: src/apriltags/Edge.cc.i
@@ -741,9 +650,11 @@ src/apriltags/Edge.i: src/apriltags/Edge.cc.i
 src/apriltags/Edge.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Edge.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Edge.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Edge.cc.i
 .PHONY : src/apriltags/Edge.cc.i
 
 src/apriltags/Edge.s: src/apriltags/Edge.cc.s
@@ -754,9 +665,11 @@ src/apriltags/Edge.s: src/apriltags/Edge.cc.s
 src/apriltags/Edge.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Edge.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Edge.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Edge.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Edge.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Edge.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Edge.cc.s
 .PHONY : src/apriltags/Edge.cc.s
 
 src/apriltags/FloatImage.o: src/apriltags/FloatImage.cc.o
@@ -767,9 +680,11 @@ src/apriltags/FloatImage.o: src/apriltags/FloatImage.cc.o
 src/apriltags/FloatImage.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/FloatImage.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/FloatImage.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/FloatImage.cc.o
 .PHONY : src/apriltags/FloatImage.cc.o
 
 src/apriltags/FloatImage.i: src/apriltags/FloatImage.cc.i
@@ -780,9 +695,11 @@ src/apriltags/FloatImage.i: src/apriltags/FloatImage.cc.i
 src/apriltags/FloatImage.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/FloatImage.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/FloatImage.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/FloatImage.cc.i
 .PHONY : src/apriltags/FloatImage.cc.i
 
 src/apriltags/FloatImage.s: src/apriltags/FloatImage.cc.s
@@ -793,9 +710,11 @@ src/apriltags/FloatImage.s: src/apriltags/FloatImage.cc.s
 src/apriltags/FloatImage.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/FloatImage.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/FloatImage.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/FloatImage.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/FloatImage.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/FloatImage.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/FloatImage.cc.s
 .PHONY : src/apriltags/FloatImage.cc.s
 
 src/apriltags/GLine2D.o: src/apriltags/GLine2D.cc.o
@@ -806,9 +725,11 @@ src/apriltags/GLine2D.o: src/apriltags/GLine2D.cc.o
 src/apriltags/GLine2D.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLine2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLine2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLine2D.cc.o
 .PHONY : src/apriltags/GLine2D.cc.o
 
 src/apriltags/GLine2D.i: src/apriltags/GLine2D.cc.i
@@ -819,9 +740,11 @@ src/apriltags/GLine2D.i: src/apriltags/GLine2D.cc.i
 src/apriltags/GLine2D.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLine2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLine2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLine2D.cc.i
 .PHONY : src/apriltags/GLine2D.cc.i
 
 src/apriltags/GLine2D.s: src/apriltags/GLine2D.cc.s
@@ -832,9 +755,11 @@ src/apriltags/GLine2D.s: src/apriltags/GLine2D.cc.s
 src/apriltags/GLine2D.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLine2D.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLine2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLine2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLine2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLine2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLine2D.cc.s
 .PHONY : src/apriltags/GLine2D.cc.s
 
 src/apriltags/GLineSegment2D.o: src/apriltags/GLineSegment2D.cc.o
@@ -845,9 +770,11 @@ src/apriltags/GLineSegment2D.o: src/apriltags/GLineSegment2D.cc.o
 src/apriltags/GLineSegment2D.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLineSegment2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLineSegment2D.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLineSegment2D.cc.o
 .PHONY : src/apriltags/GLineSegment2D.cc.o
 
 src/apriltags/GLineSegment2D.i: src/apriltags/GLineSegment2D.cc.i
@@ -858,9 +785,11 @@ src/apriltags/GLineSegment2D.i: src/apriltags/GLineSegment2D.cc.i
 src/apriltags/GLineSegment2D.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLineSegment2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLineSegment2D.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLineSegment2D.cc.i
 .PHONY : src/apriltags/GLineSegment2D.cc.i
 
 src/apriltags/GLineSegment2D.s: src/apriltags/GLineSegment2D.cc.s
@@ -871,9 +800,11 @@ src/apriltags/GLineSegment2D.s: src/apriltags/GLineSegment2D.cc.s
 src/apriltags/GLineSegment2D.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GLineSegment2D.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GLineSegment2D.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GLineSegment2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GLineSegment2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GLineSegment2D.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GLineSegment2D.cc.s
 .PHONY : src/apriltags/GLineSegment2D.cc.s
 
 src/apriltags/Gaussian.o: src/apriltags/Gaussian.cc.o
@@ -884,9 +815,11 @@ src/apriltags/Gaussian.o: src/apriltags/Gaussian.cc.o
 src/apriltags/Gaussian.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Gaussian.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Gaussian.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Gaussian.cc.o
 .PHONY : src/apriltags/Gaussian.cc.o
 
 src/apriltags/Gaussian.i: src/apriltags/Gaussian.cc.i
@@ -897,9 +830,11 @@ src/apriltags/Gaussian.i: src/apriltags/Gaussian.cc.i
 src/apriltags/Gaussian.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Gaussian.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Gaussian.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Gaussian.cc.i
 .PHONY : src/apriltags/Gaussian.cc.i
 
 src/apriltags/Gaussian.s: src/apriltags/Gaussian.cc.s
@@ -910,9 +845,11 @@ src/apriltags/Gaussian.s: src/apriltags/Gaussian.cc.s
 src/apriltags/Gaussian.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Gaussian.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Gaussian.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Gaussian.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Gaussian.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Gaussian.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Gaussian.cc.s
 .PHONY : src/apriltags/Gaussian.cc.s
 
 src/apriltags/GrayModel.o: src/apriltags/GrayModel.cc.o
@@ -923,9 +860,11 @@ src/apriltags/GrayModel.o: src/apriltags/GrayModel.cc.o
 src/apriltags/GrayModel.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GrayModel.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GrayModel.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GrayModel.cc.o
 .PHONY : src/apriltags/GrayModel.cc.o
 
 src/apriltags/GrayModel.i: src/apriltags/GrayModel.cc.i
@@ -936,9 +875,11 @@ src/apriltags/GrayModel.i: src/apriltags/GrayModel.cc.i
 src/apriltags/GrayModel.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GrayModel.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GrayModel.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GrayModel.cc.i
 .PHONY : src/apriltags/GrayModel.cc.i
 
 src/apriltags/GrayModel.s: src/apriltags/GrayModel.cc.s
@@ -949,9 +890,11 @@ src/apriltags/GrayModel.s: src/apriltags/GrayModel.cc.s
 src/apriltags/GrayModel.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/GrayModel.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/GrayModel.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/GrayModel.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/GrayModel.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/GrayModel.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/GrayModel.cc.s
 .PHONY : src/apriltags/GrayModel.cc.s
 
 src/apriltags/Homography33.o: src/apriltags/Homography33.cc.o
@@ -962,9 +905,11 @@ src/apriltags/Homography33.o: src/apriltags/Homography33.cc.o
 src/apriltags/Homography33.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Homography33.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Homography33.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Homography33.cc.o
 .PHONY : src/apriltags/Homography33.cc.o
 
 src/apriltags/Homography33.i: src/apriltags/Homography33.cc.i
@@ -975,9 +920,11 @@ src/apriltags/Homography33.i: src/apriltags/Homography33.cc.i
 src/apriltags/Homography33.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Homography33.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Homography33.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Homography33.cc.i
 .PHONY : src/apriltags/Homography33.cc.i
 
 src/apriltags/Homography33.s: src/apriltags/Homography33.cc.s
@@ -988,9 +935,11 @@ src/apriltags/Homography33.s: src/apriltags/Homography33.cc.s
 src/apriltags/Homography33.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Homography33.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Homography33.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Homography33.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Homography33.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Homography33.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Homography33.cc.s
 .PHONY : src/apriltags/Homography33.cc.s
 
 src/apriltags/MathUtil.o: src/apriltags/MathUtil.cc.o
@@ -1001,9 +950,11 @@ src/apriltags/MathUtil.o: src/apriltags/MathUtil.cc.o
 src/apriltags/MathUtil.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/MathUtil.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/MathUtil.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/MathUtil.cc.o
 .PHONY : src/apriltags/MathUtil.cc.o
 
 src/apriltags/MathUtil.i: src/apriltags/MathUtil.cc.i
@@ -1014,9 +965,11 @@ src/apriltags/MathUtil.i: src/apriltags/MathUtil.cc.i
 src/apriltags/MathUtil.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/MathUtil.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/MathUtil.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/MathUtil.cc.i
 .PHONY : src/apriltags/MathUtil.cc.i
 
 src/apriltags/MathUtil.s: src/apriltags/MathUtil.cc.s
@@ -1027,9 +980,11 @@ src/apriltags/MathUtil.s: src/apriltags/MathUtil.cc.s
 src/apriltags/MathUtil.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/MathUtil.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/MathUtil.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/MathUtil.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/MathUtil.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/MathUtil.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/MathUtil.cc.s
 .PHONY : src/apriltags/MathUtil.cc.s
 
 src/apriltags/Quad.o: src/apriltags/Quad.cc.o
@@ -1040,9 +995,11 @@ src/apriltags/Quad.o: src/apriltags/Quad.cc.o
 src/apriltags/Quad.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Quad.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Quad.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Quad.cc.o
 .PHONY : src/apriltags/Quad.cc.o
 
 src/apriltags/Quad.i: src/apriltags/Quad.cc.i
@@ -1053,9 +1010,11 @@ src/apriltags/Quad.i: src/apriltags/Quad.cc.i
 src/apriltags/Quad.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Quad.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Quad.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Quad.cc.i
 .PHONY : src/apriltags/Quad.cc.i
 
 src/apriltags/Quad.s: src/apriltags/Quad.cc.s
@@ -1066,9 +1025,11 @@ src/apriltags/Quad.s: src/apriltags/Quad.cc.s
 src/apriltags/Quad.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Quad.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Quad.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Quad.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Quad.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Quad.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Quad.cc.s
 .PHONY : src/apriltags/Quad.cc.s
 
 src/apriltags/Segment.o: src/apriltags/Segment.cc.o
@@ -1079,9 +1040,11 @@ src/apriltags/Segment.o: src/apriltags/Segment.cc.o
 src/apriltags/Segment.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Segment.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Segment.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Segment.cc.o
 .PHONY : src/apriltags/Segment.cc.o
 
 src/apriltags/Segment.i: src/apriltags/Segment.cc.i
@@ -1092,9 +1055,11 @@ src/apriltags/Segment.i: src/apriltags/Segment.cc.i
 src/apriltags/Segment.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Segment.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Segment.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Segment.cc.i
 .PHONY : src/apriltags/Segment.cc.i
 
 src/apriltags/Segment.s: src/apriltags/Segment.cc.s
@@ -1105,9 +1070,11 @@ src/apriltags/Segment.s: src/apriltags/Segment.cc.s
 src/apriltags/Segment.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/Segment.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/Segment.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/Segment.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/Segment.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/Segment.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/Segment.cc.s
 .PHONY : src/apriltags/Segment.cc.s
 
 src/apriltags/TagDetection.o: src/apriltags/TagDetection.cc.o
@@ -1118,9 +1085,11 @@ src/apriltags/TagDetection.o: src/apriltags/TagDetection.cc.o
 src/apriltags/TagDetection.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetection.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetection.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetection.cc.o
 .PHONY : src/apriltags/TagDetection.cc.o
 
 src/apriltags/TagDetection.i: src/apriltags/TagDetection.cc.i
@@ -1131,9 +1100,11 @@ src/apriltags/TagDetection.i: src/apriltags/TagDetection.cc.i
 src/apriltags/TagDetection.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetection.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetection.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetection.cc.i
 .PHONY : src/apriltags/TagDetection.cc.i
 
 src/apriltags/TagDetection.s: src/apriltags/TagDetection.cc.s
@@ -1144,9 +1115,11 @@ src/apriltags/TagDetection.s: src/apriltags/TagDetection.cc.s
 src/apriltags/TagDetection.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetection.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetection.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetection.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetection.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetection.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetection.cc.s
 .PHONY : src/apriltags/TagDetection.cc.s
 
 src/apriltags/TagDetector.o: src/apriltags/TagDetector.cc.o
@@ -1157,9 +1130,11 @@ src/apriltags/TagDetector.o: src/apriltags/TagDetector.cc.o
 src/apriltags/TagDetector.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetector.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetector.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetector.cc.o
 .PHONY : src/apriltags/TagDetector.cc.o
 
 src/apriltags/TagDetector.i: src/apriltags/TagDetector.cc.i
@@ -1170,9 +1145,11 @@ src/apriltags/TagDetector.i: src/apriltags/TagDetector.cc.i
 src/apriltags/TagDetector.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetector.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetector.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetector.cc.i
 .PHONY : src/apriltags/TagDetector.cc.i
 
 src/apriltags/TagDetector.s: src/apriltags/TagDetector.cc.s
@@ -1183,9 +1160,11 @@ src/apriltags/TagDetector.s: src/apriltags/TagDetector.cc.s
 src/apriltags/TagDetector.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagDetector.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagDetector.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagDetector.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagDetector.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagDetector.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagDetector.cc.s
 .PHONY : src/apriltags/TagDetector.cc.s
 
 src/apriltags/TagFamily.o: src/apriltags/TagFamily.cc.o
@@ -1196,9 +1175,11 @@ src/apriltags/TagFamily.o: src/apriltags/TagFamily.cc.o
 src/apriltags/TagFamily.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagFamily.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagFamily.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagFamily.cc.o
 .PHONY : src/apriltags/TagFamily.cc.o
 
 src/apriltags/TagFamily.i: src/apriltags/TagFamily.cc.i
@@ -1209,9 +1190,11 @@ src/apriltags/TagFamily.i: src/apriltags/TagFamily.cc.i
 src/apriltags/TagFamily.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagFamily.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagFamily.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagFamily.cc.i
 .PHONY : src/apriltags/TagFamily.cc.i
 
 src/apriltags/TagFamily.s: src/apriltags/TagFamily.cc.s
@@ -1222,9 +1205,11 @@ src/apriltags/TagFamily.s: src/apriltags/TagFamily.cc.s
 src/apriltags/TagFamily.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/TagFamily.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/TagFamily.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/TagFamily.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/TagFamily.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/TagFamily.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/TagFamily.cc.s
 .PHONY : src/apriltags/TagFamily.cc.s
 
 src/apriltags/UnionFindSimple.o: src/apriltags/UnionFindSimple.cc.o
@@ -1235,9 +1220,11 @@ src/apriltags/UnionFindSimple.o: src/apriltags/UnionFindSimple.cc.o
 src/apriltags/UnionFindSimple.cc.o:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.o
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.o
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/UnionFindSimple.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/UnionFindSimple.cc.o
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/UnionFindSimple.cc.o
 .PHONY : src/apriltags/UnionFindSimple.cc.o
 
 src/apriltags/UnionFindSimple.i: src/apriltags/UnionFindSimple.cc.i
@@ -1248,9 +1235,11 @@ src/apriltags/UnionFindSimple.i: src/apriltags/UnionFindSimple.cc.i
 src/apriltags/UnionFindSimple.cc.i:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.i
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.i
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/UnionFindSimple.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/UnionFindSimple.cc.i
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/UnionFindSimple.cc.i
 .PHONY : src/apriltags/UnionFindSimple.cc.i
 
 src/apriltags/UnionFindSimple.s: src/apriltags/UnionFindSimple.cc.s
@@ -1261,10 +1250,39 @@ src/apriltags/UnionFindSimple.s: src/apriltags/UnionFindSimple.cc.s
 src/apriltags/UnionFindSimple.cc.s:
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow.dir/build.make april_tag/CMakeFiles/april_tag_follow.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_still.dir/build.make april_tag/CMakeFiles/april_tag_still.dir/src/apriltags/UnionFindSimple.cc.s
-	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_node.dir/build.make april_tag/CMakeFiles/april_tag_node.dir/src/apriltags/UnionFindSimple.cc.s
 	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_sub.dir/build.make april_tag/CMakeFiles/april_tag_sub.dir/src/apriltags/UnionFindSimple.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_out.dir/build.make april_tag/CMakeFiles/april_tag_out.dir/src/apriltags/UnionFindSimple.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_follow_search.dir/build.make april_tag/CMakeFiles/april_tag_follow_search.dir/src/apriltags/UnionFindSimple.cc.s
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/apriltags/UnionFindSimple.cc.s
 .PHONY : src/apriltags/UnionFindSimple.cc.s
+
+src/figure8.o: src/figure8.cpp.o
+
+.PHONY : src/figure8.o
+
+# target to build an object file
+src/figure8.cpp.o:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/figure8.cpp.o
+.PHONY : src/figure8.cpp.o
+
+src/figure8.i: src/figure8.cpp.i
+
+.PHONY : src/figure8.i
+
+# target to preprocess a source file
+src/figure8.cpp.i:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/figure8.cpp.i
+.PHONY : src/figure8.cpp.i
+
+src/figure8.s: src/figure8.cpp.s
+
+.PHONY : src/figure8.s
+
+# target to generate assembly for a file
+src/figure8.cpp.s:
+	cd /home/nb950/catkin_ws/build && $(MAKE) -f april_tag/CMakeFiles/april_tag_figure8.dir/build.make april_tag/CMakeFiles/april_tag_figure8.dir/src/figure8.cpp.s
+.PHONY : src/figure8.cpp.s
 
 # Help Target
 help:
@@ -1272,44 +1290,39 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... install/local"
+	@echo "... april_tag_generate_messages_lisp"
+	@echo "... april_tag_generate_messages_eus"
 	@echo "... install"
 	@echo "... april_tag_follow"
+	@echo "... april_tag_gencpp"
+	@echo "... april_tag_generate_messages"
+	@echo "... _april_tag_generate_messages_check_deps_AprilTagList"
+	@echo "... april_tag_genlisp"
 	@echo "... rebuild_cache"
 	@echo "... april_tag_still"
-	@echo "... april_tag_out"
-	@echo "... april_tag_node"
-	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... _april_tag_generate_messages_check_deps_AprilTag"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... install/strip"
-	@echo "... april_tag_generate_messages_cpp"
-	@echo "... april_tag_generate_messages_py"
-	@echo "... april_tag_generate_messages"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... april_tag_sub"
-	@echo "... april_tag_genpy"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... april_tag_generate_messages_nodejs"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... april_tag_gencpp"
-	@echo "... list_install_components"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... april_tag_generate_messages_eus"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... _april_tag_generate_messages_check_deps_AprilTagList"
-	@echo "... april_tag_generate_messages_lisp"
-	@echo "... april_tag_genlisp"
 	@echo "... april_tag_geneus"
 	@echo "... april_tag_gennodejs"
+	@echo "... april_tag_node"
+	@echo "... april_tag_generate_messages_py"
+	@echo "... april_tag_generate_messages_nodejs"
+	@echo "... april_tag_genpy"
+	@echo "... april_tag_sub"
+	@echo "... april_tag_generate_messages_cpp"
+	@echo "... install/strip"
+	@echo "... april_tag_out"
+	@echo "... april_tag_follow_search"
+	@echo "... april_tag_figure8"
+	@echo "... install/local"
 	@echo "... src/april_tag_follow.o"
 	@echo "... src/april_tag_follow.i"
 	@echo "... src/april_tag_follow.s"
+	@echo "... src/april_tag_follow_search.o"
+	@echo "... src/april_tag_follow_search.i"
+	@echo "... src/april_tag_follow_search.s"
 	@echo "... src/april_tag_node.o"
 	@echo "... src/april_tag_node.i"
 	@echo "... src/april_tag_node.s"
@@ -1364,6 +1377,9 @@ help:
 	@echo "... src/apriltags/UnionFindSimple.o"
 	@echo "... src/apriltags/UnionFindSimple.i"
 	@echo "... src/apriltags/UnionFindSimple.s"
+	@echo "... src/figure8.o"
+	@echo "... src/figure8.i"
+	@echo "... src/figure8.s"
 .PHONY : help
 
 
